@@ -1,0 +1,229 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-1: #9b59b6;
+    --accent-2: #1abc9c;
+    --text-color: #34495e;
+    --light-gray: #ecf0f1;
+    --medium-gray: #bdc3c7;
+    --highlight: #f8f9fa;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--highlight);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.curriculo-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    padding: 30px;
+    position: relative;
+    margin: 0 auto;
+    max-width: 900px;
+    border: 1px solid var(--medium-gray);
+}
+
+.curriculo-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent-1), var(--accent-2));
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    border-bottom: 2px solid var(--medium-gray);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-1);
+}
+
+h3.text-muted {
+    color: var(--medium-gray);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem !important;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 0.5rem;
+}
+
+.imagem-perfil {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.imagem-perfil:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-color: var(--accent-2);
+}
+
+.item-contato {
+    margin-bottom: 0.5rem;
+}
+
+.item-contato i {
+    width: 24px;
+    color: var(--accent-2);
+}
+
+.progesso, .progessoo {
+    height: 8px;
+    background-color: var(--light-gray);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.progessooIdioma, .progessoIdioma {
+    height: 100%;
+    border-radius: 4px;
+    background-color: #9b59b6;
+}
+
+.habilidade-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.habilidade-nome {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.habilidade-porcentagem {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.etiquetaHabilidade {
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #1abc9c;
+}
+
+.etiquetaHabilidade:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    background-color: #9b59b6;
+}
+
+.secao {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.itemLinhaDoTempo {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.itemLinhaDoTempo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--accent-2);
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--accent-2);
+}
+
+.itemLinhaDoTempo::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 24px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background-color: var(--medium-gray);
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--medium-gray);
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .imagem-perfil {
+        width: 120px;
+        height: 120px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    .curriculo-container {
+        padding: 20px;
+    }
+}
+
+a {
+    color: var(--secondary-color);
+    transition: all 0.2s;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--accent-1);
+    text-decoration: underline;
+}
